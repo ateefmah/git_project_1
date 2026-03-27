@@ -25,6 +25,9 @@ def multiply(a, b):
 def divide(a, b):
     """Divide a by b."""
     print(f"[DEBUG] Dividing {a} / {b}")
+    if b == 0:
+        print(f"[DEBUG] Error: Divide by zero!")
+        raise ValueError("Cannot divide by zero")
     result = a / b
     print(f"[DEBUG] Result: {result}")
     return result
