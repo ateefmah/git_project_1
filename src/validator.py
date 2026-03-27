@@ -1,3 +1,5 @@
+"""This module contains functions to validate values and operations."""
+
 def validate_number(value):
     """Validate that value can be converted to a number."""
     try:
