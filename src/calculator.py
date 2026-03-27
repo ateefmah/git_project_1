@@ -1,4 +1,9 @@
-"""Basic calculator operations."""
+"""
+Calculator module providing basic arithmetic operations.
+
+Supports addition, subtraction, multiplication, division, and modulo.
+Raises ValueError for invalid operations such as division or modulo by zero.
+"""
 
 def add(a, b):
     """Add two numbers."""
