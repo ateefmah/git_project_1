@@ -1,4 +1,4 @@
-"""Provides functions to validate user inout for the calculator application"""
+"""Provide functions to validate user inout for the calculator application"""
 
 def validate_number(value):
     """Validate that value can be converted to a number."""

@@ -1,6 +1,6 @@
-"""Tests for calculator operations."""
+"""Tests for calculator operations"""
 import pytest
-from src.calculator import add, subtract, multiply, divide
+from src.calculator import add, subtract, multiply, divide, power
 from src.validator import validate_positive
 
 def test_add():
@@ -26,7 +26,7 @@ def test_divide_by_zero():
 def test_power():
     assert power(2, 3) == 8
     assert power(5, 2) == 25
-    assert power(10, 0) == 0
+    assert power(10, 0) == 1
 
 def test_validate_positive():
     assert validate_positive(5) == True
