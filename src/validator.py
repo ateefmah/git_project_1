@@ -25,3 +25,10 @@ def validate_positive(n):
 def is_positive(n):
     """Check if a number is positive."""
     return n > 0
+def validate_range(value, min_val=-1000, max_val=1000):
+    """Validate that number is within acceptable range."""
+    try:
+        num = float(value)
+        return min_val <= num <= max_val
+    except (ValueError, TypeError):
+        return False
