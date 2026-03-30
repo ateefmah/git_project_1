@@ -20,3 +20,7 @@ def validate_range(value, min_val=-1000, max_val=1000):
         return min_val <= num <= max_val
     except (ValueError, TypeError):
         return False
+
+def is_positive(n):
+    """Check if a number is positive."""
+    return n > 0
