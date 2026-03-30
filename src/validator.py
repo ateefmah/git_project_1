@@ -26,6 +26,14 @@ def validate_non_negative(n):
         """Return false if error arose casting to number"""
         return False
         
+def validate_range(value, min_val=-1000, max_val=1000):
+    """Validate that number is within acceptable range."""
+    try:
+        num = float(value)
+        return min_val <= num <= max_val
+    except (ValueError, TypeError):
+        return False
+
 def is_positive(n):
     """Check if a number is positive."""
     return n > 0
