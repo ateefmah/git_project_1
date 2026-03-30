@@ -1,3 +1,7 @@
+"""Basic calculator operations."""
+import math
+
+"""Comment added."""
 """
 Calculator module providing basic arithmetic operations.
 
@@ -22,8 +26,15 @@ def divide(a, b):
     """Divide a by b."""
     if b == 0:
         raise ValueError("Cannot divide by zero")
+    result = a / b
     return a / b
 
+def square_root(a):
+    """Calculate square root of a."""
+    if a < 0:
+        raise ValueError("Cannot calculate square root of negative number")
+    return math.sqrt(a)
+  
 def modulo(a, b):
     """Return remainder of a divided by b."""
     if b == 0:
