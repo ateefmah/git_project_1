@@ -1,6 +1,7 @@
-"""Tests for calculator operations."""
+"""Tests for calculator operations"""
 import pytest
-from src.calculator import add, subtract, multiply, divide, square_root
+from src.calculator import add, subtract, multiply, divide, power, modulo, square_root
+from src.validator import validate_positive
 from src.validator import validate_non_negative
 from src.validator import validate_range
 
@@ -24,6 +25,15 @@ def test_divide_by_zero():
     with pytest.raises(ValueError):
         divide(5, 0)
 
+def test_power():
+    assert power(2, 3) == 8
+    assert power(5, 2) == 25
+    assert power(10, 0) == 1
+
+def test_validate_positive():
+    assert validate_positive(5) == True
+    assert validate_positive(-5) == False
+    assert validate_positive(0) == False
 def test_square_root():
     assert square_root(9) == 3
     assert square_root(16) == 4

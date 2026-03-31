@@ -1,5 +1,6 @@
-"""This module contains functions to validate values and operations."""
+"""Provide functions to validate user inout for the calculator application"""
 
+#temp update for checkpoint4
 def validate_number(value):
     """Validate that value can be converted to a number."""
     try:
@@ -16,6 +17,17 @@ def validate_operation(op):
     """Return whether operation is part of set of supported operations"""
     return op in valid_ops
 
+def validate_positive(n):
+    """Validate that a number is positive."""
+    try:
+        num = float(n)
+        return num > 0
+    except (ValueError, TypeError):
+        return False
+
+def is_positive(n):
+    """Check if a number is positive."""
+    return n > 0
 def validate_non_negative(n):
     """Validate that a number is non-negative."""
     try:
